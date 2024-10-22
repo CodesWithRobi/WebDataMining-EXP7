@@ -42,7 +42,7 @@ for i in range(len(authority)):
 
 def sortByKey(li):
     li = dict(enumerate(li.tolist(), 1))
-    return [i[0] for i in sorted(li.items(), key=lambda v: v[1], reverse=True)]
+    return [i[0] for i in sorted(li.items(), key=lambda v: v[1])]
 authority_rank = sortByKey(authority)
 hub_rank = sortByKey(hub)
 print("Rank based on Authority:")
