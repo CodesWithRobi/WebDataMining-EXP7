@@ -116,7 +116,7 @@ plt.savefig('output.png')
 
 ### Output:
 
-![result](result.png)
+![result](https://raw.githubusercontent.com/CodesWithRobi/WebDataMining-EXP7/refs/heads/main/result.png)
 ![output](output.png)
 
 ### Result:
