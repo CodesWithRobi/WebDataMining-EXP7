@@ -1,6 +1,10 @@
-### EX7 Implementation of Link Analysis using HITS Algorithm
+#### NAME: ROBINSON J
 
-### DATE:
+#### REG.NO: 212223040170
+
+## Experiment-07 Implementation of Link Analysis using HITS Algorithm
+
+## DATE: 19/10/24
 
 ### AIM: To implement Link Analysis using HITS Algorithm in Python.
 
@@ -47,7 +51,7 @@ def hits_algorithm(adjacency_matrix, max_iterations=100, tol=1.0e-6):
     authority_scores = np.ones(num_nodes)
     hub_scores = np.ones(num_nodes)
 
-    for i in range(max_iterations):
+    for _ in range(max_iterations):
         # Authority update
         new_authority_scores = np.dot(adjacency_matrix.T, hub_scores)
         new_authority_scores /= np.linalg.norm(new_authority_scores, ord=2)  # Normalizing
@@ -81,6 +85,19 @@ authority, hub = hits_algorithm(adj_matrix)
 for i in range(len(authority)):
     print(f"Node {i}: Authority Score = {authority[i]:.4f}, Hub Score = {hub[i]:.4f}")
 
+def sortByKey(li):
+    li = dict(enumerate(li.tolist(), 1))
+    return [i[0] for i in sorted(li.items(), key=lambda v: v[1])]
+authority_rank = sortByKey(authority)
+hub_rank = sortByKey(hub)
+print("Rank based on Authority:")
+for i in range(len(authority_rank)):
+    print(f"Rank {i+1}: {authority_rank[i]}")
+
+print("Rank based on Hub:")
+for i in range(len(hub_rank)):
+    print(f"Rank {i+1}: {hub_rank[i]}")
+
 # bar chart of authority vs hub scores
 
 nodes = np.arange(len(authority))
@@ -94,9 +111,14 @@ plt.title('Authority and Hub Scores for Each Node')
 plt.xticks(nodes, [f'Node {i}' for i in nodes])
 plt.legend()
 plt.tight_layout()
-plt.show()
+plt.savefig('output.png')
 ```
 
 ### Output:
+
 ![output](output.png)
+![result](result.png)
+
 ### Result:
+
+    Successfully implemented Link Analysis using HITS Algorithm in Python.
