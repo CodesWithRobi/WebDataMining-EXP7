@@ -116,9 +116,9 @@ plt.savefig('output.png')
 
 ### Output:
 
-![output](output.png)
 ![result](result.png)
+![output](output.png)
 
 ### Result:
 
-    Successfully implemented Link Analysis using HITS Algorithm in Python.
+Successfully implemented Link Analysis using HITS Algorithm in Python.
