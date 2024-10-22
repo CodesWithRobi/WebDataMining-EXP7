@@ -98,5 +98,5 @@ plt.show()
 ```
 
 ### Output:
-
+![output](output.png)
 ### Result:
